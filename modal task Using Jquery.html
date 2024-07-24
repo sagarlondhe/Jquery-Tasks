@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Modal Task</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    
+    .btncss {
+    color: #292626;
+    background-color: #c6ebf7;
+    border: 1px solid #bac1c4;
+    border-radius: 10px; 
+    }
+
+    .btncss1{
+        border:none;
+        background-color: #c6ebf7 !important;
+    
+    }
+    
+    #myBtn{
+        height: 5rem;
+        width: 15rem;
+    }
+
+    
+   .close {
+    font-size: 20px;
+    font-weight: 700;
+    
+    }
+    .border1 {
+  
+    margin-left: 20rem;
+    margin-top: 1rem;
+    border: 1px solid #000000;
+    box-shadow: 0px 2px 2px 2px #d3d3d3;
+    border-radius: 15px;
+    margin-right: 20rem;
+    }
+
+    .display1{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #c6ebf7 !important;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 1px solid #d3d3d3;
+    }
+    a{
+        text-decoration: none !important;
+    }
+    .display2{
+    display: flex;
+    justify-content: end;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-right: 15px;
+    background-color: #c6ebf7 !important;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid #d3d3d3;
+
+    }
+    .padding1{
+        padding: 10px;
+        background-color: #fff;
+    }
+    .bg1{
+        background-color: #8b8f94;
+    }
+    
+  </style>
+</head>
+<body id="body">
+
+<div class="container">
+  <div class="text-center mt-5"><h1><u>jQuery Modal</u></h1></div>
+  <div class="text-center">
+  <button type="button" class="btncss" id="myBtn"> Open jQuery tutorail</button>
+  </div>
+  
+    <div class="myModal border1" id="myModel_close">
+     
+        <div>
+        <div class="display1">
+          <h4 class="text-center">jQuery tutorails</h4>
+          <button class="btncss1"><i class="fa fa-times close" aria-hidden="true"></i></button>
+        </div>
+        <div class="padding1">
+            <p class="">jQuery is a lightweight, "write less, do more", JavaScript library.<br>
+                The purpose of jQuery is to make it much easier to use JavaScript on your website.<br>
+                The jQuery library contains the following features:<br>
+                HTML/DOM manipulation<br>
+                CSS manipulation  <br>
+                HTML event methods<br>
+                Effects and animations<br>
+                AJAX<br>
+                Utilities<br>
+            </p>
+        </div>
+        <div class="display2">
+        <a href="https://www.w3schools.com/jquery/default.asp" target="_blank">Learn More...</a></span>
+        </div>
+       
+    
+    </div>
+  
+</div>
+
+<script>
+$(document).ready(function(){
+    $("#myModel_close").hide();
+    
+    $("#myBtn").click(function(){
+    $("#myModel_close").fadeIn();
+    $("#myModel_close").show();
+    $("#body").toggleClass("bg1");
+   
+    
+    });    
+    $(".close").click(function(){
+    $("#myModel_close").hide();
+    $("#body").removeClass("bg1"); 
+    
+    });
+    });
+</script>
+
+</body>
+</html>

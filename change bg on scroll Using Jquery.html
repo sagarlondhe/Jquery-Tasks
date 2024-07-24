@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Change background-color on Scroll</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .row {
+    margin-right: 20px !important;
+    margin-left: 20px !important;
+    }
+    body{
+        background-color: #00ffff;
+        color: #8a2be2 ;
+    }
+   .display1 {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    
+    }
+    h3{
+        top: 0px;
+        position: fixed;
+        font-size: 30px !important;
+        
+    }
+
+    i{
+        font-size: 30px !important;
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        
+    }
+    .height1{
+        height: 100vh;
+    }
+    
+    
+  </style>
+</head>
+<body>
+
+<div class="row">
+<div class="height1" id="one" data-color="#FF6347" data-background="#00FF00">
+    <div class="display1">
+       <h3><b>Change background-color on Scroll</b></h3>
+       <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</div>      
+</div> 
+
+<div id="two" class="height1" data-color="#48D1CC" data-background="#8A2BE2"></div>     
+<div id="three" class="height1" data-color="#48D1CC" data-background="#FFA07A"></div>
+<div id="four" class="height1" data-color="#AFEEEE" data-background="#FFD700"></div>    
+<div id="five"class="height1" data-color="#7CFC00" data-background="#f50c0c"></div>
+<script>
+$(document).ready(function(){
+$(window).on("scroll", function() {
+
+if ($(document).scrollTop() >= $("#one").position().top) {
+  $('body').css('background', $("#one").attr("data-background"));
+  $('body').css('color', $("#one").attr("data-color"));
+};
+
+if ($(document).scrollTop() > $("#two").position().top) {
+  $('body').css('background', $("#two").attr("data-background"));
+  $('body').css('color', $("#two").attr("data-color"));
+};
+
+if ($(document).scrollTop() > $("#three").position().top) {
+  $('body').css('background', $("#three").attr("data-background"));
+  $('body').css('color', $("#three").attr("data-color"))
+
+};
+
+if ($(document).scrollTop() > $("#four").position().top) {
+  $('body').css('background', $("#four").attr("data-background"));
+  $('body').css('color', $("#four").attr("data-color"));
+};
+
+if ($(document).scrollTop() > $("#five").position().top) {
+   
+  $('body').css('background', $("#five").attr("data-background"));
+  $('body').css('color', $("#five").attr("data-color"));
+};
+});
+})
+
+</script>
+
+</body>
+</html>

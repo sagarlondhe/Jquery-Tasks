@@ -1,0 +1,142 @@
+<html>
+<head>
+    <title>jQuery Tabs</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+    a{
+      text-decoration: none !important;
+      color: #e67213;
+      font-size: 20px !important;
+    }  
+    a:hover{
+      color:#29992f;
+    }
+    .active{
+      border: 1px solid #a3e4e4; ;
+      border-radius: 5px;
+      background-color: #56df51;
+    }
+    li:hover{
+      border: 1px solid #29c031;
+      border-radius: 5px;
+      background-color: #e0ffff;
+    }
+  
+    h1{
+      color: #5f9ea0;
+    }
+
+    p{
+      margin: 0px !important;
+    }
+    .tabs {
+     color: #000;
+    }
+    ul.tabs-nav {
+      list-style-type: none;
+      border: 1px solid#c9dfee;
+      border-bottom: none;
+      overflow: auto;
+      background: #d6ebb0;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    ul.tabs-nav li {
+       float: left;
+       padding: 8px 10px;
+    }
+    
+    .tab-content {
+       padding: 10px;
+       border: 2px solid #c9dfee;
+       background-color: #FFF;
+       border-bottom-left-radius: 15px;
+       border-bottom-right-radius: 15px;
+    }
+
+    </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<body>
+    <div class="text-center mt-5"><h1><u>jQuery Tabs</u></h1></div>
+    <div class="container">
+        <div class="tabs">
+        <ul class="tabs-nav  mt-3 m-0 p-0">
+        <li><a href="#html">HTML</a></li>
+        <li><a href="#css">CSS</a></li>
+        <li><a href="#js">JS</a></li>
+        <li><a href="#jquery">jQuery</a></li>
+        </ul>
+        <div id="tab-content">
+            <div id="html" class="tab-content active">
+              <h5>Welcome to HTML tutorails</h5>
+              <p>HTML stands for Hyper Text Markup Language<br>
+                HTML is the standard markup language for creating Web pages<br>
+                HTML describes the structure of a Web page<br>
+                HTML consists of a series of elements<br>
+                HTML elements tell the browser how to display the content<br>
+                HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.
+              </p>
+            </div>
+        
+            <div id="css" class="tab-content">
+              <h5>Welcome to CSS tutorails</h5>
+                <p>CSS stands for Cascading Style Sheets<br>
+                CSS describes how HTML elements are to be displayed on screen, paper, or in other media <br>
+                CSS saves a lot of work. It can control the layout of multiple web pages all at once
+                External stylesheets are stored in CSS files
+              </p>
+            </div>
+       
+            <div id="js" class="tab-content">
+              <h5>Welcome to JavaScript tutorails</h5>
+              <p>JavaScript is a programming language initially designed to interact with elements of web pages.<br>
+                In web browsers, JavaScript consists of three main parts:<br>
+                ECMAScript provides the core functionality.<br>
+                The Document Object Model (DOM) provides interfaces for interacting with elements on web pages<br>
+                The Browser Object Model (BOM) provides the browser API for interacting with the web browser.</p>
+            </div>
+       
+            <div id="jquery" class="tab-content">
+              <h5>Welcome to jQuery tutorails</h5>
+              <p>jQuery is a lightweight, "write less, do more", JavaScript library.<br>
+                The purpose of jQuery is to make it much easier to use JavaScript on your website.<br>
+                The jQuery library contains the following features:<br>
+                HTML/DOM manipulation<br>
+                CSS manipulation  <br>
+                HTML event methods<br>
+                Effects and animations<br>
+                AJAX<br>
+                Utilities
+              </p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+    $(document).ready(function(){
+    $('.tabs-nav li:first-child').addClass('active');
+    $('.tab-content').hide();
+    $('.tab-content:first').show();
+    //$("li").eq(0).css("background-color", "#d3d3d3");
+    //$("li").eq(1).css("background-color", "#e0ffff");
+    //$("li").eq(2).css("background-color", "#d3d3d3");
+    //$("li").eq(3).css("background-color", "#e0ffff");
+    
+    
+
+    $('.tabs-nav li').click(function(){
+    $('.tabs-nav li').removeClass('active');
+    $(this).addClass('active');
+    $('.tab-content').hide();
+  
+    var activeTab = $(this).find('a').attr('href');
+    $(activeTab).fadeIn();
+    });
+    });
+    </script>
+</body>
+</html>

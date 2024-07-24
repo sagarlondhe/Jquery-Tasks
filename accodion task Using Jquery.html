@@ -1,0 +1,123 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+.accordion {
+      background-color: #a7eec2;
+      color:#000;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+    }
+    
+    .borbot{
+        border-bottom: 1px solid;
+    }
+     
+    .borbot1 {
+    border-bottom: 1px solid;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    }
+
+    .borbot2 {
+    border-bottom:none !important;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    }
+    
+    .info1{
+      padding: 5px 10px;
+      display: none;
+      background-color:#ecc59e;
+      border: 1px dashed;
+    }
+    .info2,.info3{
+      padding: 5px 10px;
+      display: none;
+      background-color:#ecc59e;
+      border: 1px dashed;
+    }
+    .info4{
+      padding: 5px 10px;
+      display: none;
+      background-color:#ecc59e;
+      border: 1px dashed;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-top:none !important;
+    }
+    .downcss{
+       position: absolute;
+       right: 25px;
+       font-size: 25px;
+       color: #563e6e;
+       transition: 0.25s ease;
+    }
+    .downcss-animate{
+      transform: rotate(180deg);
+    }    
+</style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<body>    
+    <h3 class="text-center">jQuery Accordion</h3>
+    <div>
+    <button id="one" class="accordion borbot1">Javascript tutorails <span><i class="fa fa-angle-down downcss" aria-hidden="true"></i></span> </button>
+    <div class="info1">
+    <p>Welcome to Javascript tutorails</p>
+    </div>
+    <button id="two" class="accordion borbot">Html tutorails <span><i class="fa fa-angle-down downcss" aria-hidden="true"></i></span>  </button>
+    <div class="info2">
+    <p>Welcome to html tutorails</p>
+    </div>
+    <button id="three" class="accordion borbot">Css tutorails<span><i class="fa fa-angle-down downcss" aria-hidden="true"></i></span>  </button>
+    <div class="info3">
+    <p>Welcome to Css tutorails</p>
+    </div>
+    <button id="four" class="accordion borbot2">jQuery tutorails<span><i class="fa fa-angle-down downcss" aria-hidden="true"></i></span>  </button>
+    <div class="info4">
+    <p>Welcome to jQuery tutorails</p>
+   
+    </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+        
+        $("#one").click(function(){
+        $(".info1").toggle();
+        $("#one").find('.downcss').toggleClass('downcss-animate');
+        });
+       
+        $("#two").click(function(){
+        $(".info2").toggle();
+        $("#two").find('.downcss').toggleClass('downcss-animate');
+
+        });
+        $("#three").click(function(){
+        $(".info3").toggle();
+        $("#three").find('.downcss').toggleClass('downcss-animate');
+
+        });
+        $("#four").click(function(){
+        $(".info4").toggle();
+        $("#four").find('.downcss').toggleClass('downcss-animate');
+
+        });
+        });
+    </script>
+</body>
+
+</html>
+

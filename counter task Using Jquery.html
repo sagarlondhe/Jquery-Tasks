@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Counter Task </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<style>
+    body{
+        font-size:24px;
+        font-weight: 600;
+        
+    }
+
+    .left-border {
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+    }
+
+    .right-border {
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    }
+
+
+    .border1{
+    border: 1px solid #000;
+    border-radius: 15px;
+    box-shadow: 2px 4px 8px 4px #d3d3d3;
+    }
+    
+    .col-sm-3 {
+    background-color:#a0edf0;
+    padding-top: 50px;
+    text-align: center;
+    padding-bottom: 50px;
+    border-right: 1px solid #000;
+    }
+    .col-sm-3:last-child {
+    border-right: 0px solid #000;
+    }
+
+</style>
+</head>
+
+<div class="container">
+   <h2 class="text-center">Counter Task</h2>
+  <div class="row border1">
+    <div class="col-sm-3 left-border">
+      <div class="number">80</div>
+      <div>Projects</div>
+    </div>
+    <div class="col-sm-3">
+      <div class="number">136</div>
+      <div>Clients</div>
+    </div>
+    <div class="col-sm-3">
+      <div class="number">40</div>
+      <div>Logo</div> 
+    </div>
+    <div class="col-sm-3 right-border">
+      <div class="number">15</div>
+      <div>Languages</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  $(".number").counterUp({
+      time:3000 //The total duration of the count up animation
+  });
+</script>
+
+</html>
